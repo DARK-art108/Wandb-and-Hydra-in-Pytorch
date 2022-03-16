@@ -1,9 +1,6 @@
-seed = 42
-# backbone = 'swin_large_patch4_window12_384_in22k'
-# embedder = 'tf_efficientnet_b4_ns'
 train_batch_size = 8
 valid_batch_size = 32
-img_size = 384
+img_size = 128
 epochs = 20
 learning_rate = 1e-4
 scheduler = 'CosineAnnealingLR'
@@ -13,3 +10,4 @@ weight_decay = 1e-6
 n_accumulate = 1
 n_fold = 5
 num_classes = 10
+model = 'swin'
