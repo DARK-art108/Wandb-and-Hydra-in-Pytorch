@@ -21,8 +21,5 @@ kwargs = {'num_workers': 1, 'pin_memory': True} if device=='cuda' else {}
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=train_batch_size, shuffle=True, **kwargs)
 testloader = torch.utils.data.DataLoader(testset, batch_size=train_batch_size, shuffle=False, **kwargs)
 
-classes = ('plane', 'car', 'bird', 'cat',
-           'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
-
 
 

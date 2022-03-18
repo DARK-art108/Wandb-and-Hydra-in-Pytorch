@@ -1,6 +1,5 @@
 import os
 from loguru import logger
-import tqdm
 from config import *
 from dataset import *
 import wandb
