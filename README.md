@@ -1,6 +1,6 @@
 ## WanDB Sweeps and Hydra Configration for Pytorch
 
-![https://wandb.ai/cyclonelight/cifar10-pytorch?workspace=user-cyclonelight](utils\wandb-github-badge-gradient.svg)
+![](https://github.com/DARK-art108/Wandb-and-Hydra-in-Pytorch/blob/main/utils/wandb-github-badge-gradient.svg)
 
 ### What you can find in this repository?
 
