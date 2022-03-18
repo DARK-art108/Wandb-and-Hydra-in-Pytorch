@@ -16,3 +16,5 @@
 - [ ] Wandb Sweeps
 - [ ] Add Hydra for Configration Management
 - [ ] Torch Profiler for measuring cpu and memory consumption
+
+[Access Latest Wandb Dashboard Runs](https://wandb.ai/cyclonelight/cifar10-pytorch?workspace=user-cyclonelight)
