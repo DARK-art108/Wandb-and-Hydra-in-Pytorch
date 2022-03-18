@@ -5,6 +5,7 @@ import torchvision.transforms as transforms
 import numpy as np
 from config import *
 import torch.optim as optim
+import wandb
 import os
 
 transform = transforms.Compose([transforms.ToTensor(),

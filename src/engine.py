@@ -2,6 +2,7 @@ import os
 from loguru import logger
 import tqdm
 from config import *
+from dataset import *
 import wandb
 from torch import nn
 import torch.optim as optim
@@ -16,8 +17,23 @@ optimizer = optim.SGD(net.parameters(), momentum=0.9, lr=learning_rate, weight_d
 wandb.init(project="cifar10-pytorch")
 wandb.watch(net, criterion, log="all")
 
+classes = ('plane', 'car', 'bird', 'cat',
+           'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+
+columns=['image','label']
+data = []
+
+for i, batch in enumerate(trainloader, 0):
+    inputs, labels = batch[0], batch[1]
+    for j, image in enumerate(inputs,0):
+        data.append([wandb.Image(image),classes[labels[j].item()]])
+    break
+
+table= wandb.Table(data=data, columns=columns)
+wandb.log({"cifar10_images": table})
+
 def train(model, device, trainloader, optimizer, criterion):
-  for epoch in range(10):
+  for epoch in range(2):
     running_loss = 0.0
 
     for i, data in enumerate(trainloader, 0):
